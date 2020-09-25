@@ -1,0 +1,6 @@
+colorama
+kazoo
+psycopg2-binary
+sqlalchemy
+redis
+mysqlclient

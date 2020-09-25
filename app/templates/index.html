@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>URL Shortner</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <style>
+  .center {
+  text-align: center;
+ margin: auto;
+  width: 40%;
+ border: solid #99d6ff;
+ border-radius: 4px;
+ padding: 10px;
+ } 
+ </style>
+  <body>
+<div class="center">
+<h2>Please enter URL to shorten:</h2>
+<form align=center method=post action="{{ url_for('to_tiny_url') }}">
+  <label for="original_url">URL to shorten</label><br>
+  <input type="text" id="original_url" name="original_url"><br>
+  <input type="submit" value='Submit URL'>
+</form>
+
+</div>
+  </body>
+</html>

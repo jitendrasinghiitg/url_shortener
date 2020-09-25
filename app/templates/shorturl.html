@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <title>URL Shortner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<style>
+  .center {
+  text-align: center;
+ margin: auto;
+  width: 40%;
+ border: solid #99d6ff;
+ border-radius: 4px;
+ padding: 10px;
+ }
+
+
+
+</style>
+<body>
+<div class="center">
+    <h2>URL Shortner</h2>
+    <pr>Original Url<br>
+        <a href="{{ data['full'] }}">{{ data['full'] }}</a><br>
+        Shorten Url<br>
+        <a href="{{ url_for('get_tiny_url', tiny_id=data['tiny'], _external=True) }}">{{ url_for('get_tiny_url',
+            tiny_id=data['tiny'], _external=True) }}</a>
+    </pr>
+    <div id='button'>
+        <form action="/">
+            <input type=submit value='Go to Home'>
+        </form>
+    </div>
+</div>
+</body>
+</html>
